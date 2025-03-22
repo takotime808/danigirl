@@ -1,6 +1,10 @@
 # Deploying React App With Docker #
 
-This dir is one level too deep for the usual command ``. 
+The [Dockerfile_for_exec_bash](Dockerfile_for_exec_bash) file is included, to build and run the container, then enter with `docker exec -it <CONTAINER_ID> bash`.
+
+The main [Dockerfile](Dockerfile) is referenced below.
+
+This dir is one level too deep for the usual command `docker build -t react-app:dg -f deploy/Dockerfile .`. 
 Run the following code to check where you are and if you can build.  If able, build and run the container.
 <!-- 
 ```sh
