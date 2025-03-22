@@ -1,6 +1,6 @@
 # Ode to Dani Girl #
 
-This is a React application for Dani Girl.
+This is a React application for Dani Girl. While choosing not to fork the repo, template credit belongs to [gitname](https://github.com/gitname/react-gh-pages/tree/master).
 
 To build and run the docker container, use:
 ```sh
