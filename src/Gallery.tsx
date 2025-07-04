@@ -2,12 +2,12 @@ import React from 'react';
 import './Gallery.css';
 
 const images = [
-  'https://source.unsplash.com/random/300x200?nature1',
-  'https://source.unsplash.com/random/300x200?nature2',
-  'https://source.unsplash.com/random/300x200?nature3',
-  'https://source.unsplash.com/random/300x200?nature4',
-  'https://source.unsplash.com/random/300x200?nature5',
-  'https://source.unsplash.com/random/300x200?nature6',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/gh-pages/images/1_resized.webp',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/gh-pages/images/2_resized.webp',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/gh-pages/images/3.png',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/gh-pages/images/4_resized.webp',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/gh-pages/images/5_resized.webp',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/gh-pages/images/6_resized.webp',
 ];
 
 function Gallery() {
