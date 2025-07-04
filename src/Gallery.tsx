@@ -4,10 +4,10 @@ import './Gallery.css';
 const images = [
   'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/1.webp',
   'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/2.webp',
-  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/3.png',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/3.webp',
   'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/4.webp',
   'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/5.webp',
-  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/6.png',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/6.webp',
 ];
 
 function Gallery() {
