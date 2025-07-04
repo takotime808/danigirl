@@ -23,7 +23,7 @@ npm run deploy
 ```
 By default, the new commit on the gh-pages branch will have a commit message of "Updates". You can [specify a custom commit message](https://github.com/gitname/react-gh-pages/issues/80#issuecomment-1042449820) via the `-m` option, like this:
 ```sh
-$ npm run deploy -- -m "Deploy React app to GitHub Pages"
+npm run deploy -- -m "Deploy React app to GitHub Pages"
 ```
 
 More information on build a React app and deploying to gh-pages can be found in [gitname's template](https://github.com/gitname/react-gh-pages/tree/master).

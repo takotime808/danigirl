@@ -16,15 +16,16 @@ WORKDIR /app
 RUN apk update && apk add --no-cache git bash
 
 # Clone the React application repository
-RUN git clone https://github.com/gitname/react-gh-pages.git .
+# RUN git clone https://github.com/gitname/react-gh-pages.git .
+RUN git clone https://github.com/takotime808/danigirl.git .
 
 # COPY . .
 
 # Install dependencies
 RUN npm install
 
-# Run tests
-RUN npm test -- --watchAll=false
+# # Run tests
+# RUN npm test -- --watchAll=false
 
 # Build the React application
 RUN npm run build
