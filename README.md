@@ -30,7 +30,17 @@ More information on build a React app and deploying to gh-pages can be found in 
 
 This can all be done from inside a docker container:
 ```sh
-docker build -t react-app:dg -f deploy/Dockerfile_for_exec_bash .
+docker build -t react-app:dg-bash -f deploy/Dockerfile_for_exec_bash .
+docker run -p 3000:3000 react-app:dg-bash
+docker exec -it <CONTAINER_ID> bash
+```
+
+OR
+
+```
+docker build -t react-app:dg -f deploy/Dockerfile .
 docker run -p 3000:3000 react-app:dg
 docker exec -it <CONTAINER_ID> bash
+# then, inside container run
+npm run deploy
 ```

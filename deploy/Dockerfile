@@ -4,6 +4,9 @@
 # Use an official Node runtime as a parent image
 FROM node:20-alpine
 
+# Install git and bash
+RUN apk update && apk add --no-cache git bash
+
 # Set the working directory to /app
 WORKDIR /app
 
