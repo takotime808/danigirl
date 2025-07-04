@@ -6,34 +6,34 @@
   </defs>
   <g id="circle-gallery">
     <g transform="translate(500,500) rotate(0) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/1.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/1.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <g transform="translate(500,500) rotate(36) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/2.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/2.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <g transform="translate(500,500) rotate(72) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/3.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/3.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <g transform="translate(500,500) rotate(108) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/4.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/4.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <g transform="translate(500,500) rotate(144) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/5.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/5.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <g transform="translate(500,500) rotate(180) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/6.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/6.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <g transform="translate(500,500) rotate(216) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/7.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/7.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <g transform="translate(500,500) rotate(252) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/8.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/8.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <g transform="translate(500,500) rotate(288) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/9.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/9.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <g transform="translate(500,500) rotate(324) translate(0,-350)">
-      <image href="https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/10.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
+      <image href="https://raw.githubusercontent.com/takotime808/danigirl/main/images/10.webp" x="-75" y="-75" width="150" height="150" clip-path="url(#clipCircle)" />
     </g>
     <animateTransform attributeName="transform" type="rotate" from="0 500 500" to="360 500 500" dur="20s" repeatCount="indefinite" />
   </g>
