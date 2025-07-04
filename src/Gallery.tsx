@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Gallery.css';
 
 const images = [
@@ -11,13 +11,24 @@ const images = [
 ];
 
 function Gallery() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="gallery">
       <h2>Photo Gallery</h2>
-      <div className="gallery-grid">
-        {images.map((src, idx) => (
-          <img key={idx} src={src} alt={`Gallery ${idx}`} />
-        ))}
+      <div className="carousel">
+        <img
+          className="carousel-image"
+          src={images[index]}
+          alt={`Gallery ${index}`}
+        />
       </div>
     </div>
   );
