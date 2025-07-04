@@ -23,12 +23,15 @@ function Gallery() {
   return (
     <div className="gallery">
       <h2>Photo Gallery</h2>
-      <div className="carousel">
-        <img
-          className="carousel-image"
-          src={images[index]}
-          alt={`Gallery ${index}`}
-        />
+      <div className="carousel-container">
+        {images.map((src, idx) => (
+          <img
+            key={idx}
+            src={src}
+            className={`carousel-image${idx === index ? ' active' : ''}`}
+            alt={`Gallery ${idx}`}
+          />
+        ))}
       </div>
     </div>
   );
