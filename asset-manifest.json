@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/danigirl/static/css/main.696ab3a2.css",
-    "main.js": "/danigirl/static/js/main.1a9fa42b.js",
+    "main.js": "/danigirl/static/js/main.a5a27570.js",
     "static/js/453.22a355ff.chunk.js": "/danigirl/static/js/453.22a355ff.chunk.js",
-    "static/media/logo.svg": "/danigirl/static/media/logo.3410361a363472cb2c70bce7bfd1472e.svg",
+    "static/media/logo.svg": "/danigirl/static/media/logo.ca622c825b4349a2faebe8c69fef171f.svg",
     "index.html": "/danigirl/index.html",
     "main.696ab3a2.css.map": "/danigirl/static/css/main.696ab3a2.css.map",
-    "main.1a9fa42b.js.map": "/danigirl/static/js/main.1a9fa42b.js.map",
+    "main.a5a27570.js.map": "/danigirl/static/js/main.a5a27570.js.map",
     "453.22a355ff.chunk.js.map": "/danigirl/static/js/453.22a355ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.696ab3a2.css",
-    "static/js/main.1a9fa42b.js"
+    "static/js/main.a5a27570.js"
   ]
 }
