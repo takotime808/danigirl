@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Gallery from './Gallery';
 
-test('renders gallery heading', () => {
-  render(<App />);
+test('renders photo gallery heading', () => {
+  render(<Gallery />);
   const heading = screen.getByText(/photo gallery/i);
   expect(heading).toBeInTheDocument();
 });

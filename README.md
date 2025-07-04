@@ -2,6 +2,8 @@
 
 This is a React application for Dani Girl. While choosing not to fork the repo, template credit belongs to [gitname](https://github.com/gitname/react-gh-pages/tree/master).
 
+The site now includes a simple photo gallery demonstrating React components.
+
 The deployed site can be seen at:
 [https://takotime808.github.io/danigirl/](https://takotime808.github.io/danigirl/)
 
