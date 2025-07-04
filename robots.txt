@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
+# Have this section apply to all robots.
 User-agent: *
-Disallow:
+# Tell the robot that it should not visit any pages on the site.
+Disallow: /
