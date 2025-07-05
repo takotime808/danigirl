@@ -24,6 +24,24 @@
   color: white;
 }
 
+.App-nav {
+  margin-top: 1rem;
+}
+
+.App-nav button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.App-nav button:hover {
+  background: #555;
+}
+
 .App-link {
   color: #61dafb;
 }
