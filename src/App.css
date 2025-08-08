@@ -82,7 +82,8 @@
 }
 
 
-.menu li button {
+.menu li button,
+.menu li a {
   background: none;
   border: none;
   color: white;

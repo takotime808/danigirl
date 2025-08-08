@@ -32,6 +32,15 @@ function App() {
           </button>
           <ul>
             <li>
+              <a
+                href="https://takotime808.github.io/danigirl/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                DaniGirl
+              </a>
+            </li>
+            <li>
               <button
                 onClick={() => {
                   setView('gallery');
