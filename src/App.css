@@ -28,17 +28,17 @@
   margin-top: 1rem;
 }
 
-.App-nav button {
+.App-nav a {
   margin: 0 0.5rem;
   padding: 0.5rem 1rem;
   background: #444;
   color: white;
-  border: none;
   border-radius: 4px;
-  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.App-nav button:hover {
+.App-nav a:hover {
   background: #555;
 }
 
