@@ -68,8 +68,12 @@
 
 .menu li {
   padding: 10px 20px;
+}
+
+.menu li a {
   color: white;
-  cursor: pointer;
+  text-decoration: none;
+  display: block;
 }
 
 .menu li:hover {

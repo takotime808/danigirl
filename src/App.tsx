@@ -2,16 +2,9 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Gallery from './Gallery';
-import Carousel from './Carousel';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [page, setPage] = useState<'gallery' | 'carousel'>('gallery');
-
-  const goTo = (p: 'gallery' | 'carousel') => {
-    setPage(p);
-    setMenuOpen(false);
-  };
 
   return (
     <div className="App">
@@ -23,12 +16,19 @@ function App() {
       {menuOpen && (
         <nav className="menu">
           <ul>
-            <li onClick={() => goTo('gallery')}>Gallery</li>
-            <li onClick={() => goTo('carousel')}>Carousel</li>
+            <li>
+              <a
+                href="https://cmutnik.github.io/takophotos/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tako Photos
+              </a>
+            </li>
           </ul>
         </nav>
       )}
-      {page === 'gallery' ? <Gallery /> : <Carousel />}
+      <Gallery />
     </div>
   );
 }
