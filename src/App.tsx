@@ -18,11 +18,29 @@ function App() {
           <ul>
             <li>
               <a
+                href="https://takotime808.github.io/danigirl/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                danigirl
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://cmutnik.github.io/takophotos/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Tako Photos
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://cmutnik.github.io/takophotos/gallery/gallery01/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Gallery 01
               </a>
             </li>
           </ul>
