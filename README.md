@@ -27,6 +27,7 @@ By default, the new commit on the gh-pages branch will have a commit message of 
 ```sh
 npm run deploy -- -m "Deploy React app to GitHub Pages"
 ```
+The deploy script copies `build/index.html` to `build/404.html` so that GitHub Pages can serve the PWA correctly when users navigate directly to a route.
 
 More information on build a React app and deploying to gh-pages can be found in [gitname's template](https://github.com/gitname/react-gh-pages/tree/master).
 
