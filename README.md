@@ -4,6 +4,8 @@ This is a React application for Dani Girl. While choosing not to fork the repo, 
 
 The site now includes a simple photo gallery demonstrating React components.
 
+This project is also a Progressive Web App (PWA). When visiting the deployed site you can install it on your device and use it offline.
+
 The deployed site can be seen at:
 [https://takotime808.github.io/danigirl/](https://takotime808.github.io/danigirl/)
 
