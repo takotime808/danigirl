@@ -1,0 +1,23 @@
+.carousel {
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-container img {
+  max-width: 80%;
+  height: auto;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}

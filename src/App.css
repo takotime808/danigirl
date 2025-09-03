@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
 }
 
 .App-link {
@@ -35,4 +36,66 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.hamburger {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background: #282c34;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.close-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px 20px;
+}
+
+
+.menu li button,
+.menu li a {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
