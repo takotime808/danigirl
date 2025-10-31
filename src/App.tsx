@@ -33,24 +33,24 @@ function App() {
           <Gallery />
         ) : (
           <div className="App-inset" aria-live="polite">
-            {/* <h2>Photography Inspiration</h2> */}
-            {/* <p>
-              Explore a curated page for fresh ideas. If it does not load in the inset,
-              you can open it in a new tab using the link below.
-            </p> */}
             <div className="App-inset-frameWrapper">
               <iframe
-                src="https://takotime808.github.io/mutnik_adventures/"
-                title="Adventures"
+                src={`${process.env.PUBLIC_URL || ''}/travel-map/index.html`}
+                title="Mutnik Adventures travel map"
                 loading="lazy"
                 className="App-inset-frame"
               />
             </div>
-            {/* <p>
-              <a href="https://takotime808.github.io/mutnik_adventures/" target="_blank" rel="noreferrer">
-                Open the National Park Service site in a new tab
+            <p className="App-inset-caption">
+              Need more space?{' '}
+              <a
+                href={`${process.env.PUBLIC_URL || ''}/travel-map/index.html`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open the travel map in a separate tab.
               </a>
-            </p> */}
+            </p>
           </div>
         )}
       </main>

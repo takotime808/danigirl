@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mutnik Adventures Travel Map</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha512-sA+e2n5MZ8svdYEAKZC+dwF0EYh3YOEoTP0TO+GfY+3CX6XZwcxZV8oPZxC24p7OfcS5Zx1yk6QwBEmr5Bs7mw=="
+      crossorigin=""
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: radial-gradient(circle at top, #1c2735 0%, #0f131a 40%, #070a0f 100%);
+        color: #f4f9ff;
+        min-height: 100vh;
+        display: flex;
+      }
+
+      .map-wrapper {
+        position: relative;
+        flex: 1;
+        display: flex;
+        padding: 16px;
+      }
+
+      #travel-map {
+        flex: 1;
+        border-radius: 16px;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+        overflow: hidden;
+      }
+
+      .leaflet-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .travel-legend {
+        background: rgba(11, 16, 24, 0.88);
+        backdrop-filter: blur(12px);
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        min-width: 220px;
+        border: 1px solid rgba(97, 218, 251, 0.25);
+      }
+
+      .travel-legend h2 {
+        margin: 0 0 12px;
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #9cd8ff;
+      }
+
+      .travel-legend ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .travel-legend li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.95rem;
+      }
+
+      .travel-legend input[type='checkbox'] {
+        width: 18px;
+        height: 18px;
+        margin: 0;
+        accent-color: #61dafb;
+      }
+
+      .legend-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid rgba(244, 249, 255, 0.85);
+        flex-shrink: 0;
+      }
+
+      .legend-details {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        line-height: 1.2;
+      }
+
+      .legend-details span:first-child {
+        font-weight: 600;
+      }
+
+      .legend-details span:last-child {
+        font-size: 0.8rem;
+        opacity: 0.75;
+      }
+
+      @media (max-width: 720px) {
+        body {
+          padding: 12px;
+        }
+
+        .map-wrapper {
+          padding: 0;
+        }
+
+        .travel-legend {
+          min-width: unset;
+          width: clamp(200px, 60vw, 280px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="map-wrapper">
+      <div id="travel-map"></div>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha512-pM0IflbI8pJ47/UB+uHUXOc6Bx/OVCkXbkqVKgf/mBlC9ZwTe74MkRUYw35awqVxDcGf1gC/+Vyh2qJg3l8zKg=="
+      crossorigin=""
+    ></script>
+    <script>
+      const map = L.map('travel-map', {
+        center: [39.5, -98.35],
+        zoom: 4,
+        zoomControl: false,
+        maxBounds: [[-60, -200], [80, 200]],
+      });
+
+      L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+        maxZoom: 18,
+      }).addTo(map);
+
+      const pinGroups = [
+        {
+          name: 'Dream Destinations',
+          description: 'Places we are still dreaming about visiting together.',
+          color: '#ff7a7a',
+          markers: [
+            { name: 'Banff National Park', coords: [51.4968, -115.9281] },
+            { name: 'Santorini', coords: [36.3932, 25.4615] },
+          ],
+        },
+        {
+          name: 'Planning Soon',
+          description: 'Short-list adventures we are actively planning.',
+          color: '#fecd70',
+          markers: [
+            { name: 'Joshua Tree National Park', coords: [33.8734, -115.901] },
+            { name: 'New Orleans', coords: [29.9511, -90.0715] },
+          ],
+        },
+        {
+          name: 'Visited Favorites',
+          description: 'Special places that already hold our memories.',
+          color: '#61dafb',
+          markers: [
+            { name: 'Zion National Park', coords: [37.2982, -113.0263] },
+            { name: 'Acadia National Park', coords: [44.3386, -68.2733] },
+            { name: 'Kauai', coords: [22.0964, -159.5261] },
+          ],
+        },
+        {
+          name: 'Family & Friends',
+          description: 'Loved ones cheering us on from afar.',
+          color: '#8ef9a0',
+          markers: [
+            { name: 'Denver', coords: [39.7392, -104.9903] },
+            { name: 'Chicago', coords: [41.8781, -87.6298] },
+          ],
+        },
+      ];
+
+      const layerGroups = pinGroups.map((group) =>
+        L.layerGroup(
+          group.markers.map(({ name, coords }) =>
+            L.circleMarker(coords, {
+              radius: 9,
+              color: group.color,
+              weight: 2.5,
+              fillColor: group.color,
+              fillOpacity: 0.75,
+            }).bindPopup(`<strong>${name}</strong><br/><span style="font-size:0.85rem;opacity:0.8;">${group.name}</span>`)
+          )
+        )
+      );
+
+      const activeLayerGroups = [];
+
+      layerGroups.forEach((layer, idx) => {
+        if (idx >= 2) {
+          layer.addTo(map);
+          activeLayerGroups.push(layer);
+        }
+      });
+
+      if (activeLayerGroups.length) {
+        const bounds = L.featureGroup(activeLayerGroups).getBounds();
+        if (bounds.isValid()) {
+          map.fitBounds(bounds.pad(0.2));
+        }
+      }
+
+      const legendControl = L.control({ position: 'topright' });
+      legendControl.onAdd = function () {
+        const container = L.DomUtil.create('div', 'travel-legend');
+        container.innerHTML = `
+          <h2>Travel Map</h2>
+          <ul>
+            ${pinGroups
+              .map(
+                (group, idx) => `
+                  <li>
+                    <input type="checkbox" id="legend-${idx}" ${idx >= 2 ? 'checked' : ''} aria-label="Toggle ${group.name}" />
+                    <span class="legend-dot" style="background:${group.color};"></span>
+                    <label class="legend-details" for="legend-${idx}">
+                      <span>${group.name}</span>
+                      <span>${group.description}</span>
+                    </label>
+                  </li>
+                `
+              )
+              .join('')}
+          </ul>
+        `;
+
+        L.DomEvent.disableClickPropagation(container);
+
+        pinGroups.forEach((group, idx) => {
+          const checkbox = container.querySelector(`#legend-${idx}`);
+          checkbox.addEventListener('change', (event) => {
+            if (event.target.checked) {
+              map.addLayer(layerGroups[idx]);
+            } else {
+              map.removeLayer(layerGroups[idx]);
+            }
+          });
+        });
+
+        return container;
+      };
+
+      legendControl.addTo(map);
+    </script>
+  </body>
+</html>

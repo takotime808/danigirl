@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders gallery heading', () => {
   render(<App />);
-  const heading = screen.getByText(/photo gallery/i);
-  expect(heading).toBeInTheDocument();
+  const headings = screen.getAllByText(/photo gallery/i);
+  expect(headings.length).toBeGreaterThan(0);
 });
