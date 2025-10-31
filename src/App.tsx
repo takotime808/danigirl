@@ -25,7 +25,7 @@ function App() {
           className={`App-tab-button${activeTab === 'inset' ? ' App-tab-button--active' : ''}`}
           onClick={() => setActiveTab('inset')}
         >
-          Web Inset
+          Travel Map
         </button>
       </nav>
       <main className="App-content">
@@ -33,28 +33,24 @@ function App() {
           <Gallery />
         ) : (
           <div className="App-inset" aria-live="polite">
-            <h2>Photography Inspiration</h2>
-            <p>
+            {/* <h2>Photography Inspiration</h2> */}
+            {/* <p>
               Explore a curated page for fresh ideas. If it does not load in the inset,
               you can open it in a new tab using the link below.
-            </p>
+            </p> */}
             <div className="App-inset-frameWrapper">
               <iframe
-                src="https://www.nps.gov/index.htm"
-                title="National Park Service inspiration"
+                src="https://takotime808.github.io/mutnik_adventures/"
+                title="Adventures"
                 loading="lazy"
                 className="App-inset-frame"
               />
             </div>
-            <p>
-              <a
-                href="https://www.nps.gov/index.htm"
-                target="_blank"
-                rel="noreferrer"
-              >
+            {/* <p>
+              <a href="https://takotime808.github.io/mutnik_adventures/" target="_blank" rel="noreferrer">
                 Open the National Park Service site in a new tab
               </a>
-            </p>
+            </p> */}
           </div>
         )}
       </main>
