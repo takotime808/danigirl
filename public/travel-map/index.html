@@ -15,6 +15,11 @@
         color-scheme: dark;
       }
 
+      html,
+      body {
+        height: 100%;
+      }
+
       * {
         box-sizing: border-box;
       }
@@ -33,6 +38,7 @@
         flex: 1;
         display: flex;
         padding: 16px;
+        min-height: 520px;
       }
 
       #travel-map {
@@ -40,6 +46,7 @@
         border-radius: 16px;
         box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
         overflow: hidden;
+        min-height: 100%;
       }
 
       .leaflet-container {
@@ -118,6 +125,11 @@
 
         .map-wrapper {
           padding: 0;
+          min-height: 420px;
+        }
+
+        #travel-map {
+          min-height: 100%;
         }
 
         .travel-legend {
