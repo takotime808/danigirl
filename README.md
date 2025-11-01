@@ -41,6 +41,9 @@ OR
 docker build -t react-app:dg -f deploy/Dockerfile .
 docker run -p 3000:3000 react-app:dg
 docker exec -it <CONTAINER_ID> bash
-# then, inside container run
+
+# Then, inside container run
+git config --global user.email "..."
+git config --global user.name "..."
 npm run deploy
 ```
