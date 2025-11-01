@@ -20,6 +20,10 @@ const images = [
   'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/16.webp',
   'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/17.webp',
   'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/18.webp',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/2Q6A4289.webp',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/rd-juicy-1.webp',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/rd-juicy-2.webp',
+  'https://raw.githubusercontent.com/takotime808/danigirl/refs/heads/main/images/ny_jc_2025.webp',
 ];
 
 function Gallery() {
