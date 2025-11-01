@@ -43,6 +43,7 @@ function App() {
                 src="https://takotime808.github.io/mutnik_adventures/"
                 title="Adventures"
                 loading="lazy"
+                scrolling="no"
                 className="App-inset-frame"
               />
             </div>
