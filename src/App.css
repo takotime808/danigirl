@@ -62,7 +62,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  height: clamp(520px, 112vh, 920px);
+  height: clamp(520px, 75vh, 920px);
 }
 
 .App-inset-frame {
