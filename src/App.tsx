@@ -4,7 +4,7 @@ import './App.css';
 import Gallery from './Gallery';
 
 function App() {
-  const [activeTab, setActiveTab] = useState<'gallery' | 'inset'>('gallery');
+  const [activeTab, setActiveTab] = useState<'gallery' | 'inset' | 'starchart'>('gallery');
 
   return (
     <div className="App">
@@ -27,17 +27,18 @@ function App() {
         >
           Travel Map
         </button>
+        <button
+          type="button"
+          className={`App-tab-button${activeTab === 'starchart' ? ' App-tab-button--active' : ''}`}
+          onClick={() => setActiveTab('starchart')}
+        >
+          Starchart
+        </button>
       </nav>
       <main className="App-content">
-        {activeTab === 'gallery' ? (
-          <Gallery />
-        ) : (
+        {activeTab === 'gallery' && <Gallery />}
+        {activeTab === 'inset' && (
           <div className="App-inset" aria-live="polite">
-            {/* <h2>Photography Inspiration</h2> */}
-            {/* <p>
-              Explore a curated page for fresh ideas. If it does not load in the inset,
-              you can open it in a new tab using the link below.
-            </p> */}
             <div className="App-inset-frameWrapper">
               <iframe
                 src="https://takotime808.github.io/mutnik_adventures/"
@@ -47,11 +48,20 @@ function App() {
                 className="App-inset-frame"
               />
             </div>
-            {/* <p>
-              <a href="https://takotime808.github.io/mutnik_adventures/" target="_blank" rel="noreferrer">
-                Open the National Park Service site in a new tab
-              </a>
-            </p> */}
+          </div>
+        )}
+        {activeTab === 'starchart' && (
+          <div className="App-inset" aria-live="polite">
+            <div className="App-inset-frameWrapper">
+              <iframe
+                src="https://virtualsky.lco.global/embed/index.html?longitude=-122.4194&latitude=37.7749&projection=stereo&constellations=true&showstarlabels=true&gridlines_az=true&live=true"
+                title="Live starchart"
+                loading="lazy"
+                scrolling="no"
+                className="App-inset-frame"
+                allowFullScreen
+              />
+            </div>
           </div>
         )}
       </main>
